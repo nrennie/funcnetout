@@ -27,8 +27,6 @@ func_depth_outlier(
 \item{maxiter}{Maximum number of iterations for outlier detection. Default 10.}
 }
 \value{
-A numeric giving the threshold.
-
 A boolean vector.
 }
 \description{

@@ -1,6 +1,6 @@
 Package: funcnetout
 Title: Functional Network Outliers
-Version: 1.0.1
+Version: 1.0.2
 Authors@R: 
     person(given = "Nicola",
            family = "Rennie",
@@ -13,4 +13,5 @@ LazyData: true
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.1.2
 Imports:
-  mrfDepth
+  mrfDepth,
+  MASS

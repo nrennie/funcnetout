@@ -3,4 +3,5 @@
 export(func_depth_outlier)
 export(func_depth_threshold)
 export(func_depth_threshold_beta)
+importFrom(MASS,mvrnorm)
 importFrom(mrfDepth,mfd)

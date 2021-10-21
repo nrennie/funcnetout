@@ -10,6 +10,7 @@
 #' @return A numeric giving the threshold.
 #' @seealso [func_depth_threshold_beta()]
 #' @importFrom mrfDepth mfd
+#' @importFrom MASS mvrnorm
 #' @export
 #'
 #'
@@ -28,7 +29,7 @@ func_depth_threshold <- function(data,times,perc=0.01,B=1000){
     #create bootstrap samples
     b <- diff1[,sample(1:ncol(diff1),size=ncol(diff1),replace=TRUE,prob=weights)]
     #calculate smoothing matrix
-    s <- matrix(mvrnorm(nrow(data),rep(0,ncol(data)),Sigma=0.05*cov(data)),nrow=ncol(data),ncol=n,byrow=TRUE)
+    s <- matrix(mvrnorm(nrow(data),rep(0,ncol(data)),Sigma=0.05*cov(data)),nrow=ncol(data),ncol=nrow(data),byrow=TRUE)
     #smooth samples
     y <- array(b+s,dim=c(ncol(data),nrow(data),1))
     #calculate percentile of each set of weights

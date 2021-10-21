@@ -8,9 +8,9 @@
 #' @param perc The percentile of the distribution to use. Default 0.01.
 #' @param B The number of bootstraps to use. If 0, distribution is fitted to empirical depths. Default 10.
 #' @param maxiter Maximum number of iterations for outlier detection. Default 10.
-#' @return A numeric giving the threshold.
 #' @seealso [func_depth_threshold()]
 #' @seealso [func_depth_threshold_beta()]
+#' @importFrom mrfDepth mfd
 #' @return A boolean vector.
 #' @export
 #'
@@ -40,7 +40,7 @@ func_depth_outlier <- function(data, times, threshold="beta", perc=0.01, B=10, m
   i = 0
 
   #iteratively remove outliers
-  while (length(which(depths <= C))>0 && i < maxiter){
+  while (length(which(depths <= C))>0 && i < maxiter && length(outliers)<nrow(data)){
     i = i + 1
     d1 <- data[-outliers,]
     d <- array(t(d1), dim=c(ncol(d1),nrow(d1),1))

@@ -1,5 +1,11 @@
 # funcnetout
 
+# funcnetout 1.0.4 2022_03_24
+
+* add beta threshold
+* add basic detection
+* add extrapolation function
+
 # funcnetout 1.0.3 2022_03_23
 
 * tidy up

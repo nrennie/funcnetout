@@ -22,3 +22,6 @@ A numeric giving the threshold.
 This function calculates the threshold for the functional depths in order to
 classify outliers using a bootstrap approach.
 }
+\seealso{
+\code{\link[=func_depth_threshold_beta]{func_depth_threshold_beta()}}
+}

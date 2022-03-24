@@ -2,14 +2,13 @@
 #'
 #' This function extrapolates partially observed data using historic and arima processes.
 #'
-#' @param data A matrix where each row is an observation of a time series. Row names should be a unique ID.
+#' @param data A matrix where each row is an observation of a time series. Row names should be a unique datetime.
 #' @param alpha A weighting function to weight between historic and arima forecasts
 #' @return A boolean vector.
 #' @export
 
 func_extrapolation <- function(data,
                                alpha = 0) {
-  # rownames must be a date
 
   # alpha should be same length as ncol(data)
   if (length(alpha) != ncol(data)) {

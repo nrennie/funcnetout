@@ -7,7 +7,7 @@
 func_extrapolation(data, alpha = 0)
 }
 \arguments{
-\item{data}{A matrix where each row is an observation of a time series. Row names should be a unique ID.}
+\item{data}{A matrix where each row is an observation of a time series. Row names should be a unique datetime.}
 
 \item{alpha}{A weighting function to weight between historic and arima forecasts}
 }

@@ -1,6 +1,6 @@
 # funcnetout
 
-# funcnetout 1.0.4 2022_03_25
+# funcnetout 1.0.4 2022_03_24
 
 * add beta threshold
 * add basic detection

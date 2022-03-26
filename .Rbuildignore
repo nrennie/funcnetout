@@ -1,0 +1,6 @@
+^funcnetout\.Rproj$
+^\.Rproj\.user$
+drafts/
+.lintr
+funcnetout.png
+Test.R

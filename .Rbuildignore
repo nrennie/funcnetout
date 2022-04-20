@@ -4,3 +4,7 @@ drafts/
 .lintr
 funcnetout.png
 Test.R
+^_pkgdown\.yml$
+^docs$
+^pkgdown$
+^\.github$

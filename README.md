@@ -1,4 +1,4 @@
-# funcnetout <img src="https://github.com/nrennie/funcnetout/blob/main/man/figures/funcnetout.png?raw=true" align="right" width="120" />
+# funcnetout <img src="man/figures/logo.png" align="right" width="120" />
 
 An R package for detecting functional outliers in a network setting.
 

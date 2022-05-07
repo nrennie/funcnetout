@@ -1,13 +1,13 @@
 Package: funcnetout
 Title: Functional Network Outliers
-Version: 1.0.4
+Version: 1.0.5
 Authors@R: 
     person(given = "Nicola",
            family = "Rennie",
            role = c("aut", "cre"),
            email = "nrennie35@gmail.com")
 Description: An R package for detecting functional outliers in a network setting, with options for online or offline detection.
-License: GPL (>= 2)
+License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown = TRUE)

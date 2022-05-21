@@ -1,6 +1,6 @@
 ## funcnetout 1.0.6 2022_05_21
 
-* update pkgdown theme
+* update pkgdown theme 
 
 ## funcnetout 1.0.5 2022_05_07
 

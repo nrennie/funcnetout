@@ -1,6 +1,6 @@
 Package: funcnetout
 Title: Functional Network Outliers
-Version: 1.0.5
+Version: 1.0.6
 Authors@R: 
     person(given = "Nicola",
            family = "Rennie",
@@ -16,4 +16,5 @@ Imports:
   forecast,
   mrfDepth,
   MASS
+Config/Needs/website: nrennie/nrenniepkgdown
 URL: https://nrennie.github.io/funcnetout/

@@ -1,3 +1,8 @@
+## funcnetout 1.0.7 2022_08_27
+
+* update GitHub actions
+* update linting
+
 ## funcnetout 1.0.6 2022_05_21
 
 * update pkgdown theme 

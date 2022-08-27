@@ -13,7 +13,6 @@
 #' @seealso [func_depth_threshold()]
 #' @export
 #'
-#'
 
 func_depth_threshold_beta <- function(data,
                                       times,
@@ -30,8 +29,7 @@ func_depth_threshold_beta <- function(data,
     beta <- alpha * ((1 / m) - 1)
     threshold <- stats::qbeta(perc, shape1 = alpha, shape2 = beta)
     threshold
-  }
-  else {
+  } else {
 
     #create an empty list to store bootstrap samples
     w <- numeric(length = B)

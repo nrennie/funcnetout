@@ -1,7 +1,6 @@
 #' Functional Depth Outliers
 #'
-#' This function negates the in function and returns true if the item before notin is not in the item after.
-#'
+#' This function calculates the functional depth and returns the outliers.
 #' @param data A matrix where each row is an observation of a time series. Row names should be a unique ID.
 #' @param times A vector of length equal to the number of columns as data specifying the time points recorded at.
 #' @param threshold The choice of threshold calculation. One of c("beta", "bootstrap"). Default "beta".
@@ -10,7 +9,7 @@
 #' @param maxiter Maximum number of iterations for outlier detection. Default 10.
 #' @seealso [func_depth_threshold()]
 #' @seealso [func_depth_threshold_beta()]
-#' @return A boolean vector.
+#' @return A vector of outliers based on rownames.
 #' @export
 
 func_depth_outlier <- function(data,
@@ -35,7 +34,7 @@ func_depth_outlier <- function(data,
   #format and calculate depths
   d <- array(t(data), dim = c(ncol(data), nrow(data), 1))
   rownames(d) <- seq_len(nrow(data))
-  fit <- mrfDepth::mfd(d)
+  fit <- mrfDepth::mfd(d, time = times, type = "projdepth")
   depths <- fit$MFDdepthX
 
   #find outliers
@@ -48,7 +47,7 @@ func_depth_outlier <- function(data,
     i <- i + 1
     d1 <- data[-outliers_int, ]
     d <- array(t(d1), dim = c(ncol(d1), nrow(d1), 1))
-    fit <- mrfDepth::mfd(d)
+    fit <- mrfDepth::mfd(d, time = times, type = "projdepth")
     depths <- fit$MFDdepthX
     outliers <- c(outliers, rownames(d1[which(depths <= C), ]))
   }

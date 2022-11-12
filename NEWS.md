@@ -1,3 +1,8 @@
+## funcnetout 1.0.8 2022_11_12
+
+* add `func_depth` function
+* use `times` argument in `func_depth_outlier`
+
 ## funcnetout 1.0.7 2022_08_27
 
 * update GitHub actions

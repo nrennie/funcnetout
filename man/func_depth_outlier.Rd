@@ -27,10 +27,10 @@ func_depth_outlier(
 \item{maxiter}{Maximum number of iterations for outlier detection. Default 10.}
 }
 \value{
-A boolean vector.
+A vector of outliers based on rownames.
 }
 \description{
-This function negates the in function and returns true if the item before notin is not in the item after.
+This function calculates the functional depth and returns the outliers.
 }
 \seealso{
 \code{\link[=func_depth_threshold]{func_depth_threshold()}}
